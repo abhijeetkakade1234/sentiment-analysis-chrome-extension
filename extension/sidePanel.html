@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <style>
+        body { 
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .summary-text { 
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+        #status { 
+            color: #666;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        .positive { color: #2ecc71; }
+        .negative { color: #e74c3c; }
+        .neutral { color: #3498db; }
+        .emotion {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin: 2px;
+        }
+        .analysis-content {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="status">Waiting for content...</div>
+    <div id="results">Initializing analysis...</div>
+    <script src="sidePanel.js"></script>
+</body>
+</html>

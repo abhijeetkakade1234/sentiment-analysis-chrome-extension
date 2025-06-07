@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Web Sentiment Analyzer",
+  "version": "1.0",
+  "description": "Analyzes visible content of web pages for sentiment and keywords.",
+  "permissions": ["activeTab", "sidePanel", "scripting", "storage", "contextMenus", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "side_panel": {
+    "default_path": "sidePanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
