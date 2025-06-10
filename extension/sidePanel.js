@@ -30,9 +30,9 @@ function updateResults(data) {
             <h3>Sentiment Analysis</h3>
             <p><strong>Overall Tone:</strong> <span class="${data.overall_tone.toLowerCase()}">${data.overall_tone}</span></p>
             <p><strong>Top Emotions:</strong> ${data.top_emotions.map(([e, count]) => `<span class="emotion">${e} (${count})</span>`).join(', ')}</p>
-            <div class="summary-text">
+            <!-- <div class="summary-text">
                 ${data.summary_text}
-            </div>
+            </div> -->
         </div>
     `;
 }
